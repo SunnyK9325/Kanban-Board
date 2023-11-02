@@ -48,6 +48,14 @@ const statusIcons = {
   4: <CancelIcon style={{color:'#95A2B3', fontSize:'20px'}} />
 }
 
+const statusIconColor = {
+  'Anoop sharma': '#E1E1E1',
+  'Yogesh': '#A2FF86',
+  'Shankar Kumar': '#A2FF86',
+  'Ramesh': '#A2FF86',
+  'Suresh': '#A2FF86',
+}; 
+
 
 const DashBoard = () => {
   const { selectedData, user, importance } = useSelector((state) => state.SelectDataReducer);
@@ -77,6 +85,8 @@ const DashBoard = () => {
                       src={imageMap[elem[index]?.title]}
                       alt="UserImage"
                     />
+                    <div className="showStatusDashboard" style={{background :statusIconColor[elem[index]?.title]}}></div>
+
                   </div>
                 ) : (                                 // priority icons
                   <div className="icon">

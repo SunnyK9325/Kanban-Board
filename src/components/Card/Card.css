@@ -10,7 +10,7 @@
     overflow: auto;
     justify-content: space-between;
     min-width: 300px;
-    min-height: 150px;
+    min-height: 140px;
 }
 
 .cardHeading {
@@ -43,10 +43,10 @@
 
 .showStatus {
     position: absolute;
-    right: -5px;
-    bottom: -5px;
-    width: 8px;
-    height: 8px;
+    right: -7px;
+    bottom: -7px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 1px solid white;
 }

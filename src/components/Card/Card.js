@@ -45,11 +45,11 @@ const statusIcons = {
   }
 
 const statusIconColor = {
-    'usr-1': 'grey',
-    'usr-2': 'green',
-    'usr-3': 'green',
-    'usr-4': 'green',
-    'usr-5': 'green',
+    'usr-1': '#E1E1E1',
+    'usr-2': '#A2FF86',
+    'usr-3': '#A2FF86',
+    'usr-4': '#A2FF86',
+    'usr-5': '#A2FF86',
 };  
 
 const Card = ({ id, title, tag, user, priority, importance, userId, status }) => {
