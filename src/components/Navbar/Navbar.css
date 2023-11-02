@@ -1,0 +1,76 @@
+.topheader {
+    padding-left: 10px;
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.displayButton {
+    position: relative;
+    margin-left: 30px;
+}
+
+.displayButton button {
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    border: 2px solid #EFF0F1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px 1px #EFF0F1; 
+}
+
+.displayButton button svg {
+    margin-right: 5px; 
+}
+
+.displayButton button span {
+    margin-left: 5px; 
+}
+
+.selectGroup {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropOnClick {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 250px;
+    background-color: #f8f8fa;
+    border: 1px solid #EFF0F1;
+    border-radius: 10px;
+    margin-top: 10px;
+    z-index: 10;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.dropOnClick > * {
+    width: 100%;
+}
+
+.selectStyle {
+    width: 100px;
+    border-radius: 5px;
+    background: white;
+    padding: 2px 5px;
+    border: 2px solid #EFF0F1;
+}
+
+.headerButton {
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    font-size: 13px;
+    color: gray;
+}

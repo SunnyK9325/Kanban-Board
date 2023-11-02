@@ -1,0 +1,84 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    border: 1px #E1E1E1;
+    border-radius: 8px;
+    box-shadow: #E1E1E1 0px 1px 2px 0px, #E1E1E1 0px 1px 3px 1px;
+    background: white;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.cardHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardHeading span {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.cardContainer > * {
+    width: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+}
+
+.imageContainer img {
+    width: 125%;
+    height: 125%;
+    border-radius: 50%;
+}
+
+.showStatus {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 8px;
+    height: 8px;
+    background: silver;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.cardTitle {
+    font-weight: 200;
+    margin: 5px 0; 
+}
+
+.cardTags {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    margin-top: 5px; 
+}
+
+.tags {
+    color: grey;
+    width: max-content;
+    padding: 2px 4px;
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+span {
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: century gothic;
+}
