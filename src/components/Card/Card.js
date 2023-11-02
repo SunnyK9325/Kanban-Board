@@ -39,7 +39,7 @@ const priorityIcons = {
 const statusIcons = {
     'Backlog': <CircleOutlinedIcon style={{color:"#E2E2E2" , fontSize:'18px'}}/>,
     'Todo': <RiContrastLine style={{color: "F1CB50", fontSize:'22px'}}/>,
-    'In progress': <LuCircleDashed style={{color: 'grey', fontSize:'20px'}}/>,
+    'In progress': <LuCircleDashed style={{color: 'grey', fontSize:'20px', minWidth:'18px', maxWidth:'18px'}}/>,
     'Done': <CheckCircleIcon style={{color: '#5E6AD2', fontSize:'18px'}} />,
     'Cancelled': <CancelIcon style={{color: 'grey', fontSize:'18px'}} />
   }
@@ -97,7 +97,7 @@ const Card = ({ id, title, tag, user, priority, importance, userId, status }) =>
                 {tag?.map((elem, index) => {
                     return (
                         <div key={index} className="tags">
-                            <BiSolidCircle style={{color:'#E1E1E1'}}/> <span style={{ fontSize: '12px' }}>{elem}</span>
+                            <BiSolidCircle style={{color:'#E1E1E1'}}/> <span style={{ fontSize: '14px' }}>{elem}</span>
                         </div>
                     );
                 })}
