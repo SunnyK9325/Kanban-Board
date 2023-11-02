@@ -30,21 +30,29 @@ const imageMap = {
 
 const priorityIcons = {
     0: <MoreHorizIcon />,
-    1: <TbAlertSquareFilled style={{fontSize:"20px"}} />,
+    1: <TbAlertSquareFilled style={{color:'orange',fontSize:"20px"}} />,
     2: <SignalCellularAltSharpIcon />,
     3: <SignalCellularAlt2BarSharpIcon />,
     4: <SignalCellularAlt1BarSharpIcon />
 };
 
 const statusIcons = {
-    0: <CircleOutlinedIcon style={{color:"#E2E2E2"}}/>,
-    1: <RiContrastLine style={{color: "#F1CB50", fontSize:'25px'}}/>,
-    2: <LuCircleDashed style={{color: '#E1E1E1', fontSize:'20px'}}/>,
-    3: <CancelIcon style={{color: '#E1E1E1', fontSize:'22px'}} />,
-    4: <CheckCircleIcon style={{color: '#5E6AD2'}} />
+    'Backlog': <CircleOutlinedIcon style={{color:"#E2E2E2" , fontSize:'18px'}}/>,
+    'Todo': <RiContrastLine style={{color: "F1CB50", fontSize:'22px'}}/>,
+    'In progress': <LuCircleDashed style={{color: 'grey', fontSize:'20px'}}/>,
+    'Done': <CheckCircleIcon style={{color: '#5E6AD2', fontSize:'18px'}} />,
+    'Cancelled': <CancelIcon style={{color: 'grey', fontSize:'18px'}} />
   }
 
-const Card = ({ id, title, tag, user, priority, importance, userId }) => {
+const statusIconColor = {
+    'usr-1': 'grey',
+    'usr-2': 'green',
+    'usr-3': 'green',
+    'usr-4': 'green',
+    'usr-5': 'green',
+};  
+
+const Card = ({ id, title, tag, user, priority, importance, userId, status }) => {
     // Maximum number of characters to display in title
     const maxLength = 55;
 
@@ -65,16 +73,16 @@ const Card = ({ id, title, tag, user, priority, importance, userId }) => {
                     {!user &&
                         <>
                             <img src={imageMap[userId]} alt="UserImage" />
-                            <div className="showStatus"></div>
+                            <div className="showStatus" style={{background :statusIconColor[userId]}}></div>
                         </>}
                 </div>
             </div>
 
             {/* Title section */}
             <div className="cardTitle">
-            <div className="titleWithIcon" style={{display:'flex', alignItems:'center'}}>
-                    {(importance || user ) && statusIcons[priority]}
-                    <p>{truncateTitle(title)}</p>
+            <div className="titleWithIcon" style={{display:'flex'}}>
+                    {(importance || user ) && statusIcons[status]}
+                    <p style={(importance || user ) ? {marginLeft:'10px'}:null}>{truncateTitle(title)}</p>
                 </div>
             </div>
 

@@ -19,15 +19,13 @@ export const selectData = (group, allTickets, orderValue) => async (dispatch) =>
 
         let user = false;
         let importance = false;
-        let mySet = new Set();
         let arr = [], selectedData = [];
 
         if(group === 'status'){
-            allTickets.forEach((elem) => {
-                mySet.add(elem.status);
-            })
+            
+      
     
-            arr = [...mySet];
+            arr = ['Backlog', 'Todo', 'In progress', 'Done', 'Cancelled'];
     
             arr.forEach((elem, index) => {
                 let arr = allTickets.filter((fElem) => {

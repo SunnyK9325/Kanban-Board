@@ -14,6 +14,9 @@ import SignalCellularAlt1BarSharpIcon from '@mui/icons-material/SignalCellularAl
 import SignalCellularAltSharpIcon from '@mui/icons-material/SignalCellularAltSharp';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
+
 
 import img0 from '../../images/img0.png';
 import img1 from '../../images/img1.png';
@@ -38,9 +41,11 @@ const priorityIcons = {
 };
 
 const statusIcons = {
-  0: <CircleOutlinedIcon style={{color:"#E2E2E2"}}/>,
-  1: <RiContrastLine style={{color: "#F1CB50", fontSize:'25px'}}/>,
-  2: <LuCircleDashed />
+  0: <CircleOutlinedIcon style={{color:"#E2E2E2", fontSize:'22px'}}/>,
+  1: <RiContrastLine style={{color: "#F1CB50", fontSize:'22px'}}/>,
+  2: <LuCircleDashed style={{fontSize:'18px'}}/>,
+  3: <CheckCircleIcon style={{color: '#5E6AD2', fontSize:'20px'}} />,
+  4: <CancelIcon style={{color:'#95A2B3', fontSize:'20px'}} />
 }
 
 
@@ -95,7 +100,7 @@ const DashBoard = () => {
             </div>
             <div className="dashList flex-gap-10" style={{gap:'12px'}}>
               {elem[index]?.value?.map((elem, ind) => (
-                <Card id={elem.id} title={elem.title} tag={elem.tag} user={user} priority={elem.priority} importance={importance} userId={elem.userId}/>
+                <Card id={elem.id} title={elem.title} tag={elem.tag} user={user} priority={elem.priority} importance={importance} userId={elem.userId} status={elem.status}/>
               ))}
             </div>
           </div>
