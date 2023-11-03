@@ -25,6 +25,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <hr style={{color: '#E1E1E1', border:'none'}}/>
       <DashBoard />
     </div>
   );
